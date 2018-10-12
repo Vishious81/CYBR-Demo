@@ -13,4 +13,5 @@ apk update \
 && rm -rf /var/cache/apk/ /tmp/*
 
 COPY entrypoint.sh /usr/local/bin/
+
 ENTRYPOINT [entrypoint.sh]
