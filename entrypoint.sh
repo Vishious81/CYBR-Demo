@@ -1,3 +1,3 @@
 #!/bin/sh
 
-/bin/sh -c 'while sleep 3600; do :; done'
+/bin/sh -c /bin/sh -c 'tail -f /dev/null'
