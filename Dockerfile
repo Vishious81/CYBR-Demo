@@ -1,3 +1,4 @@
+## Dockerfile for latest alpine with latest OpenSSH enabled
 FROM alpine:latest
 
 ENV ROOT_PASSWORD=ChangeMe!
