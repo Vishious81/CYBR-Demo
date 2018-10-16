@@ -1,3 +1,4 @@
 #!/bin/sh
 
-/bin/sh -c /bin/sh -c 'tail -f /dev/null'
+# do not detach (-D), log to stderr (-e), passthrough other arguments
+exec /usr/sbin/sshd -D -e "$@"
