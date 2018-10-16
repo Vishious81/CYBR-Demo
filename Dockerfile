@@ -1,6 +1,8 @@
 ## Dockerfile for latest alpine with latest OpenSSH enabled
 FROM alpine:latest
 
+LABEL maintainer="https://github.com/Vishious81"
+
 ENV ROOT_PASSWORD=ChangeMe!
 
 EXPOSE 22
