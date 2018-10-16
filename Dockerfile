@@ -7,7 +7,7 @@ ENV ROOT_PASSWORD=ChangeMe!
 
 EXPOSE 22
 
-RUN apk update && apk upgrade && apk add --no-cache openssh \
+RUN apk update && apk upgrade && apk add openssh \
     && sed -i s/#PermitRootLogin./PermitRootLogin\ yes/ /etc/ssh/sshd_config \
     && echo "root:${ROOT_PASSWORD}" | chpasswd \
     && rm -rf /var/cache/apk/ /tmp/*
