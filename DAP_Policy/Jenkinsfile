@@ -1,0 +1,13 @@
+pipeline {
+    agent any
+
+    stages {
+        stage ('Upload new policy') {
+            steps {
+                sh "docker exec conjur-cli bash -c 'cd /Conjur_Policy && git pull && conjur policy load --replace root root.yml'"
+                sh "docker exec conjur-cli bash -c 'cd /Conjur_Policy && git pull && conjur policy load --replace jenkins jenkins.yml'"
+                sh "docker exec conjur-cli bash -c 'cd /Conjur_Policy && git pull && conjur policy load --replace secrets secrets.yml'"
+            }
+        }
+    }
+}
